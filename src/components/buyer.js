@@ -1,55 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Login Form</title>
-  <style>
-    html, body {
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    form {
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      padding: 40px;
-      max-width: 700px;
-      width: 100%;
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    form label,
-    form input[type="text"],
-    form input[type="password"],
-    form input[type="submit"] {
-      display: block;
-      width: 100%;
-      margin-bottom: 20px;
-    }
-    form input[type="submit"] {
-      width: auto;
-      cursor: pointer;
-      background-color: #4CAF50;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 3px;
-      margin-bottom: 0; 
-      align-self: center; 
-    }
-  </style>
-</head>
-<body>
-  <form id="loginForm">
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username" required>
-    
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password" required>
-    
-    <input type="submit" value="Login">
-  </form>
-</body>
-</html>
+export default function Buyer() {
+  return (
+    <div className="h-full w-1/3 m-32 mx-[30%]">
+      <form id="loginForm" className="rounded border p-10 w-full box-border flex flex-col items-center">
+        <label for="username" className="block w-full mb-5">Username:</label>
+        <input type="text" id="username" name="username" className="block border w-full mb-5" required />
+
+        <label for="password" className="block w-full mb-5">Password:</label>
+        <input type="password" id="password" name="password" className="block w-full border mb-5" required />
+
+        <input type="submit" value="Login" className="w-auto px-5 py-1 cursor-pointer border bg-green-600 text-white rounded-sm mb-0 self-center" />
+      </form>
+    </div>
+  );
+}
